@@ -30,19 +30,20 @@ public class IntakeTest {
     }
 
     @Test
-    public void testMotorDescriptionSuccess() {
+    public void testMotorDescriptionTest1() {
        String testValue = "Hello 2590!";
+       String incorrectValue = "Goodbye 2590!";
        Mockito.when(mockMotorPWM.getDescription()).thenReturn((String)testValue);
        Assert.assertEquals(_intake.getMotorDescription(), testValue);
        System.out.println("Found value: " + _intake.getMotorDescription());
     }
 
     @Test
-    public void testMotorDescriptionFailure() {
+    public void testMotorDescriptionTest2() {
        String testValue = "Hello 2590!";
        String incorrectValue = "Goodbye 2590!";
        Mockito.when(mockMotorPWM.getDescription()).thenReturn((String)testValue);
-       Assert.assertEquals(_intake.getMotorDescription(), incorrectValue);
+       Assert.assertEquals(_intake.getMotorDescription(), testValue);
        System.out.println("Found value: " + _intake.getMotorDescription());
     }
 }
