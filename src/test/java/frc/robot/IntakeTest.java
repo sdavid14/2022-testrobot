@@ -51,7 +51,7 @@ public class IntakeTest {
        String testValue = "Hello 2590!";
        String incorrectValue = "Goodbye 2590!";
        Mockito.when(mockMotorPWM.getDescription()).thenReturn((String)testValue);
-       Assert.assertEquals(_intake.getMotorDescription(), testValue);
+       Assert.assertEquals(_intake.getMotorDescription(), incorrectValue);
        System.out.println("Found value: " + _intake.getMotorDescription());
     }
 }
